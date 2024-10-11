@@ -1,0 +1,14 @@
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\bin\Debug\net8.0\MyPracticeCSharp.exe
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\bin\Debug\net8.0\MyPracticeCSharp.deps.json
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\bin\Debug\net8.0\MyPracticeCSharp.runtimeconfig.json
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\bin\Debug\net8.0\MyPracticeCSharp.dll
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\bin\Debug\net8.0\MyPracticeCSharp.pdb
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.AssemblyInfoInputs.cache
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.AssemblyInfo.cs
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.csproj.CoreCompileInputs.cache
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.dll
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\refint\MyPracticeCSharp.dll
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.pdb
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.genruntimeconfig.cache
+C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\ref\MyPracticeCSharp.dll
