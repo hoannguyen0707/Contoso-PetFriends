@@ -14,12 +14,17 @@
         string animalPhysicalDescription = "";
         string animalPersonalityDescription = "";
         string animalNickname = "";
+        string suggestedDonation = "";
 
         //variables that support data entry
         int maxPets = 8;
+        int maxPetsInfo = 7;
 
         //array used to store runtime data, there is no persisted data
-        string[,] ourAnimals = new string[maxPets, 6];
+        string[,] ourAnimals = new string[maxPets, maxPetsInfo];
+
+        //array used to store each animal information
+        string[] eachAnimalInfo;
 
         //initial animals list before display the menu
         for (int i = 0; i < maxPets; i++)
@@ -33,6 +38,7 @@
                     animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
                     animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
                     animalNickname = "lola";
+                    suggestedDonation = "85.00";
                     break;
                 case 1:
                     animalSpecies = "dog";
@@ -41,6 +47,7 @@
                     animalPhysicalDescription = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
                     animalPersonalityDescription = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
                     animalNickname = "loki";
+                    suggestedDonation = "49.99";
                     break;
                 case 2:
                     animalSpecies = "cat";
@@ -49,6 +56,7 @@
                     animalPhysicalDescription = "small white female weighing about 8 pounds. litter box trained.";
                     animalPersonalityDescription = "friendly";
                     animalNickname = "Puss";
+                    suggestedDonation = "40.00";
                     break;
                 case 3:
                     animalSpecies = "cat";
@@ -57,6 +65,7 @@
                     animalPhysicalDescription = "";
                     animalPersonalityDescription = "";
                     animalNickname = "";
+                    suggestedDonation = "";
                     break;
                 default:
                     animalSpecies = "";
@@ -65,14 +74,33 @@
                     animalPhysicalDescription = "";
                     animalPersonalityDescription = "";
                     animalNickname = "";
+                    suggestedDonation = "";
                     break;
             }
-            ourAnimals[i, 0] = "ID #: " + animalID;
-            ourAnimals[i, 1] = "Species: " + animalSpecies;
-            ourAnimals[i, 2] = "Age: " + animalAge;
-            ourAnimals[i, 3] = "Nickname: " + animalNickname;
-            ourAnimals[i, 4] = "Physical description: " + animalPhysicalDescription;
-            ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
+
+            //format the suggested donation
+            decimal decimalDonation;
+            if (!decimal.TryParse(suggestedDonation, out decimalDonation))
+            {
+                decimalDonation = 45.00m; //if guggested donation is not a number, default is 45.00
+            }
+
+            //string array to store each animal information
+            eachAnimalInfo = new string[]{
+                "ID #: " + animalID,
+                "Species: " + animalSpecies,
+                "Age: " + animalAge,
+                "Nickname: " + animalNickname,
+                "Physical description: " + animalPhysicalDescription,
+                "Personality: " + animalPersonalityDescription,
+                $"Suggested Donation:  {decimalDonation:C2}"
+            };
+
+            //assign each animal information to the our animal array
+            for (int j = 0; j < eachAnimalInfo.Length; j++)
+            {
+                ourAnimals[i, j] = eachAnimalInfo[j];
+            }
 
         }
 
@@ -84,7 +112,7 @@
             Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
             Console.WriteLine(" 1. List all of our current pet information");
             Console.WriteLine(" 2. Add a new animal friend to the ourAnimals array");
-            Console.WriteLine(" 3. Ensure animal ages and physical descriptions are complete");
+            Console.WriteLine(" 3. Display all dogs with a specified characteristic");
             Console.WriteLine(" 4. Ensure animal nicknames and personality descriptions are complete");
             Console.WriteLine(" 5. Edit an animal's age");
             Console.WriteLine(" 6. Edit an animal's personality description");
@@ -108,7 +136,7 @@
                         if (ourAnimals[i, 0] != "ID #: ")
                         {
                             Console.WriteLine();
-                            for (int j = 0; j < 6; j++)
+                            for (int j = 0; j < maxPetsInfo; j++)
                             {
                                 Console.WriteLine($"{ourAnimals[i, j]}");
                             }
@@ -164,7 +192,7 @@
                         //get the pet's age. can be ? at initial entry.
                         do
                         {
-                            int petAge;
+                            //int petAge;
                             Console.WriteLine("Please input the pet's age, can be ? if unknown.");
                             readResult = Console.ReadLine();
                             if (readResult != null)
@@ -172,7 +200,7 @@
                                 animalAge = readResult.Trim();
                                 if (animalAge != "?")
                                 {
-                                    validEntry = int.TryParse(animalAge, out petAge);
+                                    validEntry = int.TryParse(animalAge, out int petAge);
                                 }
                                 else
                                     validEntry = true;
@@ -226,6 +254,16 @@
                         }
                         while (animalNickname == "");
 
+                        //add suggested Donation
+                        Console.WriteLine("Please help to donate to support the pets.");
+                        readResult = Console.ReadLine();
+                        if (readResult != null)
+                        {
+                            suggestedDonation = readResult.Trim().ToLower();
+                        }
+
+
+
                         // store the pet information in the ourAnimals array (zero based)
                         ourAnimals[petCount, 0] = "ID #: " + animalID;
                         ourAnimals[petCount, 1] = "Species: " + animalSpecies; ;
@@ -233,6 +271,7 @@
                         ourAnimals[petCount, 3] = "Nickname: " + animalNickname;
                         ourAnimals[petCount, 4] = "Physical description: " + animalPhysicalDescription;
                         ourAnimals[petCount, 5] = "Personality: " + animalPersonalityDescription;
+                        ourAnimals[petCount, 6] = "suggested Donation: " + suggestedDonation;
 
                         // increment petCount (the array is zero-based, so we increment the counter after adding to the array)
                         petCount += 1;

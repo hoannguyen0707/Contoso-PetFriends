@@ -12,3 +12,4 @@ C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\refint\My
 C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.pdb
 C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.genruntimeconfig.cache
 C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\ref\MyPracticeCSharp.dll
+c:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\obj\Debug\net8.0\MyPracticeCSharp.sourcelink.json
