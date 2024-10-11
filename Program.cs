@@ -26,6 +26,9 @@
         //array used to store each animal information
         string[] eachAnimalInfo;
 
+        //support to store the suggested donation to decimal donation
+
+
         //initial animals list before display the menu
         for (int i = 0; i < maxPets; i++)
         {
@@ -255,11 +258,16 @@
                         while (animalNickname == "");
 
                         //add suggested Donation
+                        decimal decimalDonation = 45.00m;
                         Console.WriteLine("Please help to donate to support the pets.");
                         readResult = Console.ReadLine();
-                        if (readResult != null)
+                        if (readResult != null && !decimal.TryParse(readResult, out decimalDonation))
                         {
-                            suggestedDonation = readResult.Trim().ToLower();
+                            decimalDonation = 45.00m;
+                        }
+                        else if (string.IsNullOrWhiteSpace(readResult))
+                        {
+                            decimalDonation = 45.00m;
                         }
 
 
@@ -271,7 +279,7 @@
                         ourAnimals[petCount, 3] = "Nickname: " + animalNickname;
                         ourAnimals[petCount, 4] = "Physical description: " + animalPhysicalDescription;
                         ourAnimals[petCount, 5] = "Personality: " + animalPersonalityDescription;
-                        ourAnimals[petCount, 6] = "suggested Donation: " + suggestedDonation;
+                        ourAnimals[petCount, 6] = $"suggested Donation: {decimalDonation:C2}";
 
                         // increment petCount (the array is zero-based, so we increment the counter after adding to the array)
                         petCount += 1;

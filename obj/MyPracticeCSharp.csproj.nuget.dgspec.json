@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj": {}
+    "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj": {
+    "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
+        "projectUniqueName": "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
         "projectName": "MyPracticeCSharp",
-        "projectPath": "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
+        "projectPath": "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
         "packagesPath": "C:\\Users\\hoannguyen1\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\obj\\",
+        "outputPath": "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hoannguyen1\\AppData\\Roaming\\NuGet\\NuGet.Config"
