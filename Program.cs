@@ -38,7 +38,7 @@
                     animalSpecies = "dog";
                     animalID = "d1";
                     animalAge = "2";
-                    animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
+                    animalPhysicalDescription = "hoan medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
                     animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
                     animalNickname = "lola";
                     suggestedDonation = "85.00";
@@ -47,7 +47,7 @@
                     animalSpecies = "dog";
                     animalID = "d2";
                     animalAge = "9";
-                    animalPhysicalDescription = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
+                    animalPhysicalDescription = "nguyen large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
                     animalPersonalityDescription = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
                     animalNickname = "loki";
                     suggestedDonation = "49.99";
@@ -313,7 +313,73 @@
 
                     break;
                 case "3":
-                    Console.WriteLine("You selected option 3");
+                    // Display all dogs with a specified characteristic");
+                    string dogCharactersSearch = "";
+                    string[] moreThanTwoDCS = new string[] { };
+
+                    while (dogCharactersSearch == "")
+                    {
+                        Console.WriteLine("Plese input the dog's characters you want to search: ");
+                        readResult = Console.ReadLine();
+
+                        if (readResult != null)
+                        {
+                            dogCharactersSearch = readResult.ToLower().Trim();
+                            moreThanTwoDCS = dogCharactersSearch.Split(" ");
+                        }
+
+                    }
+
+                    bool noMatchsDog = true;
+                    string dogDescription;
+
+                    // #6 loop through the ourAnimals array to search for matching animals
+                    // can tiep tuc check neu input string tu 2 words "freindly loves"
+                    //hien tai dang bi duplicate records khi search keywords tuw 2 words
+
+                    for (int i = 0; i < maxPets; i++)
+                    {
+                        bool dogMatch = true;
+                        if (ourAnimals[i, 1].Contains("dog") && moreThanTwoDCS.Length > 1)
+                        {
+                            for (int j = 0; j < moreThanTwoDCS.Length; j++)
+                            {
+                                if (dogMatch == true)
+                                {
+                                    // #7 Search combined descriptions and report results
+                                    dogDescription = ourAnimals[i, 4] + "\n" + ourAnimals[i, 5];
+
+                                    if (dogDescription.Contains(dogCharactersSearch[j]))
+                                    {
+                                        noMatchsDog = false;
+                                    }
+                                    Console.WriteLine($"our dog {ourAnimals[i, 3]} is a match");
+                                    Console.WriteLine(dogDescription);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (dogMatch == true)
+                            {
+                                // #7 Search combined descriptions and report results
+                                dogDescription = ourAnimals[i, 4] + "\n" + ourAnimals[i, 5];
+
+                                if (dogDescription.Contains(dogCharactersSearch))
+                                {
+                                    Console.WriteLine($"our dog {ourAnimals[i, 3]} is a match");
+                                    Console.WriteLine(dogDescription);
+                                    noMatchsDog = false;
+                                }
+
+                            }
+                        }
+                    }
+
+                    if (noMatchsDog == true)
+                        Console.WriteLine("None of our dogs are a match found for: " + dogCharactersSearch);
+
+
                     Console.WriteLine("\nPress the Enter key to continue.");
                     readResult = Console.ReadLine();
                     break;

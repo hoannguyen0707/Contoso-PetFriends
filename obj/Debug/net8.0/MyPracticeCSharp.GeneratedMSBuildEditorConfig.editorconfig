@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyPracticeCSharp
-build_property.ProjectDir = C:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\
+build_property.ProjectDir = c:\Users\hoannguyen1\MyPraticeCSharp\MyPracticeCSharp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

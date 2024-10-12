@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
+      "projectUniqueName": "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
       "projectName": "MyPracticeCSharp",
-      "projectPath": "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
+      "projectPath": "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\MyPracticeCSharp.csproj",
       "packagesPath": "C:\\Users\\hoannguyen1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\obj\\",
+      "outputPath": "c:\\Users\\hoannguyen1\\MyPraticeCSharp\\MyPracticeCSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hoannguyen1\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
